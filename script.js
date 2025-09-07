@@ -462,6 +462,7 @@ class InteractiveElements {
         `;
         
         document.body.appendChild(scrollToTopBtn);
+        console.log('Scroll to top button created and added to DOM');
         
         // Show/hide button based on scroll position
         window.addEventListener('scroll', () => {
@@ -476,10 +477,10 @@ class InteractiveElements {
         
         // Scroll to top functionality
         scrollToTopBtn.addEventListener('click', () => {
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: { y: 0 },
-                ease: 'power2.inOut'
+            console.log('Scroll to top button clicked');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
         
